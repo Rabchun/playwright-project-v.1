@@ -2,7 +2,8 @@
 
 **Structure:**
 
-<img width="487" height="353" alt="image" src="https://github.com/user-attachments/assets/e1692e1e-bab5-44d1-a3ac-4c10fba60f3b" />
+<img width="496" height="252" alt="image" src="https://github.com/user-attachments/assets/19da4a12-9fe7-40b4-9bf1-7e0376cca92b" />
+
 
 
 
