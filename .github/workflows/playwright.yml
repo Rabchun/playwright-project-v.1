@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
-  
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -28,8 +29,10 @@ jobs:
             npm install
           fi
 
+
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+
 
       - name: Run Playwright tests
         run: npx playwright test --reporter=allure-playwright
@@ -39,6 +42,7 @@ jobs:
         run: |
           npx allure generate allure-results --clean -o allure-report || echo "Allure report generation failed"
 
+
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v4
@@ -47,6 +51,7 @@ jobs:
           path: allure-report
           retention-days: 30
 
+  
       - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4
@@ -54,4 +59,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
