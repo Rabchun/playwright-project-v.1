@@ -1,0 +1,57 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - img "logo" [ref=e5]
+  - generic [ref=e6]:
+    - img "auth caption" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: Not a member?
+      - button "Sign Up Now" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Sign Up Now
+    - generic [ref=e17]:
+      - generic [ref=e18]: Sign In
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: Email
+            - textbox [ref=e24]
+          - generic [ref=e27]: Please, enter your email address
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: Password
+            - textbox [ref=e31]
+          - generic [ref=e34]: The Password is required
+        - button "Sign In" [active] [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]: Sign In
+        - button "Forgot password" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: Forgot password
+      - generic [ref=e42]: Or
+      - button "button icon Sign In with Google" [ref=e44] [cursor=pointer]:
+        - img "button icon" [ref=e45]
+        - generic [ref=e46]: Sign In with Google
+      - button "button icon Sign In with Apple" [ref=e48] [cursor=pointer]:
+        - img "button icon" [ref=e49]
+        - generic [ref=e50]: Sign In with Apple
+      - button "button icon Sign In with Microsoft" [ref=e52] [cursor=pointer]:
+        - img "button icon" [ref=e53]
+        - generic [ref=e54]: Sign In with Microsoft
+  - generic [ref=e55]:
+    - list [ref=e56]:
+      - listitem [ref=e57]:
+        - link "Home" [ref=e58] [cursor=pointer]:
+          - /url: https://repmove.app/
+      - listitem [ref=e59]:
+        - text: "|"
+        - link "Contact Us" [ref=e60] [cursor=pointer]:
+          - /url: https://repmove.app/contact-us
+      - listitem [ref=e61]:
+        - text: "|"
+        - link "Terms And Conditions" [ref=e62] [cursor=pointer]:
+          - /url: https://repmove.app/terms-and-conditions
+      - listitem [ref=e63]:
+        - text: "|"
+        - link "Privacy Policy" [ref=e64] [cursor=pointer]:
+          - /url: https://repmove.app/privacypolicy
+    - generic [ref=e65]: Accomplish Sales LLC © 2025
+```

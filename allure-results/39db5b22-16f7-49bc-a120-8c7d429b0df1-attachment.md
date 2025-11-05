@@ -1,0 +1,53 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - img "logo" [ref=e5]
+  - generic [ref=e6]:
+    - img "auth caption" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: Not a member?
+      - button "Sign Up Now" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Sign Up Now
+    - generic [ref=e17]:
+      - generic [ref=e18]: Sign In
+      - generic [ref=e20]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Email
+          - textbox [ref=e24]
+        - generic [ref=e26]:
+          - generic [ref=e27]: Password
+          - textbox [ref=e28]
+        - button "Sign In" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: Sign In
+        - button "Forgot password" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: Forgot password
+      - generic [ref=e36]: Or
+      - button "button icon Sign In with Google" [ref=e38] [cursor=pointer]:
+        - img "button icon" [ref=e39]
+        - generic [ref=e40]: Sign In with Google
+      - button "button icon Sign In with Apple" [ref=e42] [cursor=pointer]:
+        - img "button icon" [ref=e43]
+        - generic [ref=e44]: Sign In with Apple
+      - button "button icon Sign In with Microsoft" [ref=e46] [cursor=pointer]:
+        - img "button icon" [ref=e47]
+        - generic [ref=e48]: Sign In with Microsoft
+  - generic [ref=e49]:
+    - list [ref=e50]:
+      - listitem [ref=e51]:
+        - link "Home" [ref=e52] [cursor=pointer]:
+          - /url: https://repmove.app/
+      - listitem [ref=e53]:
+        - text: "|"
+        - link "Contact Us" [ref=e54] [cursor=pointer]:
+          - /url: https://repmove.app/contact-us
+      - listitem [ref=e55]:
+        - text: "|"
+        - link "Terms And Conditions" [ref=e56] [cursor=pointer]:
+          - /url: https://repmove.app/terms-and-conditions
+      - listitem [ref=e57]:
+        - text: "|"
+        - link "Privacy Policy" [ref=e58] [cursor=pointer]:
+          - /url: https://repmove.app/privacypolicy
+    - generic [ref=e59]: Accomplish Sales LLC © 2025
+```

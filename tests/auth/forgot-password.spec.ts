@@ -7,10 +7,8 @@ test.describe('Forgot Password Page', () => {
     const forgot = new ForgotPasswordPage(page);
     const email = 'inomaliya13@gmail.com';
 
-    // Створюємо користувача, якщо він ще не існує
     await registerUser(page, email);
 
-    // Тепер перевіряємо Forgot Password
     await forgot.goto();
     await forgot.submitReset(email);
     await forgot.assertSuccessMessage();

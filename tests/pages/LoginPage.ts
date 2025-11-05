@@ -5,7 +5,6 @@ export class LoginPage {
   readonly emailInput;
   readonly passwordInput;
   readonly signInButton;
-  readonly rememberMeCheckbox;
   readonly errorMessage;
   readonly googleButton;
   readonly appleButton;
@@ -13,11 +12,10 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.emailInput = page.getByPlaceholder('Email');
-    this.passwordInput = page.getByPlaceholder('Password');
-    this.signInButton = page.getByRole('button', { name: /sign in/i });
-    this.rememberMeCheckbox = page.getByRole('checkbox', { name: /remember/i });
-    this.errorMessage = page.locator('[data-test="error-message"]');
+    this.emailInput = page.locator(`input[type="email"]`);
+    this.passwordInput = page.locator(`input[type="password"]`);
+    this.signInButton = page.locator(`button[type="submit"]`);
+    this.errorMessage = page.getByRole('alert').filter({ hasText: 'Invalid to login' });
     this.googleButton = page.getByRole('button', { name: /google/i });
     this.appleButton = page.getByRole('button', { name: /apple/i });
     this.microsoftButton = page.getByRole('button', { name: /microsoft/i });

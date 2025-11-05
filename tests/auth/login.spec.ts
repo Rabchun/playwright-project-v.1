@@ -5,7 +5,7 @@ test.describe('Login Page', () => {
   test('Valid login', async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto();
-    await login.login('valid_user@test.com', 'StrongPass123!');
+    await login.login('inomaliya13@gmail.com', '1994naruto1994');
     await expect(page).toHaveURL(/dashboard|home/); 
   });
 
@@ -13,14 +13,15 @@ test.describe('Login Page', () => {
     const login = new LoginPage(page);
     await login.goto();
     await login.login('invalid@test.com', 'wrongpass');
-    await login.assertLoginError('Invalid credentials');
+    await login.assertLoginError('Invalid to login');
   });
 
   test('Empty fields show validation messages', async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto();
     await login.signInButton.click();
-    await expect(page.locator('text=Required')).toHaveCount(2);
+    await login.page.getByText('Please, enter your email address', { exact: true }).waitFor();
+    await login.page.getByText('The Password is required', { exact: true }).waitFor();
   });
 
   test('OAuth buttons visible', async ({ page }) => {
