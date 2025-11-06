@@ -13,6 +13,7 @@ export class RegisterPage {
   readonly signUpButton;
   readonly successMessage;
   readonly errorMessage;
+  readonly errorMessagePassword;
 
   public generatedEmail: string = '';
 
@@ -28,7 +29,8 @@ export class RegisterPage {
     this.passwordInput = page.locator('input[type="password"]');
     this.signUpButton = page.getByRole('button', { name: 'Sign Up', exact: true });
     this.successMessage = page.getByRole('alert');
-    this.errorMessage = page.getByRole('alert').filter({ hasText: 'Invalid to reset password' });
+    this.errorMessage = page.getByRole('alert', { name: 'Invalid to sign up' });
+    this.errorMessagePassword = page.getByText('Min length for Password is');
   }
 
   async goto() {
@@ -95,7 +97,11 @@ export class RegisterPage {
   }
 
   async assertRegistrationError(expectedText: string) {
-    await expect(this.errorMessage).toBeVisible({ timeout: 10000 });
-    await expect(this.errorMessage).toContainText(expectedText, { timeout: 10000 });
+    await expect(this.errorMessagePassword).toBeVisible({ timeout: 10000 });
+    await expect(this.errorMessagePassword).toContainText(expectedText, { timeout: 10000 });
+  }
+    async assertRegistrationErrorEmail(expectedText: string) {
+    await expect(this.errorMessage).toBeVisible();
+    await expect(this.errorMessage).toHaveText(expectedText);
   }
 }

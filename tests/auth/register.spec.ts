@@ -51,11 +51,13 @@ test.describe('Registration Page', () => {
       'ValidPass123!'
     );
 
-    // Використовуємо email з попереднього тесту
-    await register.emailInput.fill(registeredEmail);
+   
+    await register.emailInput.fill('inomaliya13@gmail.com');
 
     await register.submit();
-    await register.assertRegistrationError('Email already in use');
+    await register.assertRegistrationErrorEmail('Invalid to sign up');
+   
+    
   });
 });
 

@@ -1,0 +1,82 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - img "logo" [ref=e5]
+  - generic [ref=e6]:
+    - img "auth caption" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]: Already a member?
+      - button "Sign In" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Sign In
+    - generic [ref=e17]:
+      - generic [ref=e18]: Sign Up
+      - generic [ref=e20]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: First Name
+          - textbox [ref=e24]: TestFirst
+        - generic [ref=e26]:
+          - generic [ref=e27]: Last Name
+          - textbox [ref=e28]: TestLast
+        - generic [ref=e30]:
+          - generic [ref=e31]: Company Name
+          - textbox [ref=e32]: TestCompany
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: Industry
+            - generic [ref=e38]: Distributor
+            - combobox [ref=e39]:
+              - textbox
+          - generic [ref=e40] [cursor=pointer]:
+            - generic: 
+        - generic [ref=e42]:
+          - generic [ref=e43]: Email
+          - textbox [ref=e44]: testfirst.testlast@example.com
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: Country
+              - generic [ref=e54]: "+61"
+              - combobox [ref=e55]:
+                - textbox
+            - generic [ref=e56] [cursor=pointer]:
+              - generic: 
+          - generic [ref=e58]:
+            - generic [ref=e59]: Phone
+            - textbox [ref=e60]: "323232323"
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: Password
+            - textbox [ref=e64]: "1"
+          - generic [ref=e67]: Min length for Password is 5
+        - button "Sign Up" [active] [ref=e69] [cursor=pointer]:
+          - generic [ref=e70]: Sign Up
+      - generic [ref=e71]: Or
+      - button "button icon Sign Up with Google" [ref=e73] [cursor=pointer]:
+        - img "button icon" [ref=e74]
+        - generic [ref=e75]: Sign Up with Google
+      - button "button icon Sign Up with Apple" [ref=e77] [cursor=pointer]:
+        - img "button icon" [ref=e78]
+        - generic [ref=e79]: Sign Up with Apple
+      - button "button icon Sign In with Microsoft" [ref=e81] [cursor=pointer]:
+        - img "button icon" [ref=e82]
+        - generic [ref=e83]: Sign In with Microsoft
+  - generic [ref=e84]:
+    - list [ref=e85]:
+      - listitem [ref=e86]:
+        - link "Home" [ref=e87] [cursor=pointer]:
+          - /url: https://repmove.app/
+      - listitem [ref=e88]:
+        - text: "|"
+        - link "Contact Us" [ref=e89] [cursor=pointer]:
+          - /url: https://repmove.app/contact-us
+      - listitem [ref=e90]:
+        - text: "|"
+        - link "Terms And Conditions" [ref=e91] [cursor=pointer]:
+          - /url: https://repmove.app/terms-and-conditions
+      - listitem [ref=e92]:
+        - text: "|"
+        - link "Privacy Policy" [ref=e93] [cursor=pointer]:
+          - /url: https://repmove.app/privacypolicy
+    - generic [ref=e94]: Accomplish Sales LLC © 2025
+```
