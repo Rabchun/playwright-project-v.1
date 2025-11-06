@@ -42,6 +42,10 @@ jobs:
         run: |
           allure generate allure-results --clean -o allure-report || echo "Allure report generation failed"
 
+      - name: Zip Allure report
+        if: always()
+        run: zip -r allure-report.zip allure-report
+
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v4
@@ -57,4 +61,18 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+      - name: Send Allure report via email
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.office365.com
+          server_port: 587
+          username: ${{ secrets.OUTLOOK_USER }}
+          password: ${{ secrets.OUTLOOK_PASS }}
+          subject: "Allure Report - Playwright Tests"
+          body: "Звіт Allure додається у вкладенні."
+          to: alex.rabchun@outlook.com
+          from: ${{ secrets.OUTLOOK_USER }}
+          attachments: allure-report.zip
 
